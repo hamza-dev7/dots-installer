@@ -18,8 +18,10 @@ git submodule update --init --recursive
 
 sudo pacman -S --needed --noconfirm - < pkglist.txt
 
+sudo systemctl enable bluetooth.service
 sudo systemctl enable ly@tty2.service
-sudo install -Db -S .bak -m644 ly/config.ini /etc/ly/config.ini
+sudo install -Dvbm644 -S .bak ly/config.ini /etc/ly/config.ini
+sudo install -Dvbm644 -S .bak limine/limine.conf /boot/EFI/BOOT/limine.conf
 
 if ! command -v yay &>/dev/null; then
     echo "Installing YaY :) ..."

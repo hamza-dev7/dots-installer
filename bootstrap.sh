@@ -22,6 +22,7 @@ sudo systemctl enable bluetooth.service
 sudo systemctl enable ly@tty2.service
 sudo install -Dvbm644 -S .bak ly/config.ini /etc/ly/config.ini
 sudo install -Dvbm644 -S .bak limine/limine.conf /boot/EFI/BOOT/limine.conf
+sudo install -Dvbm644 -S .bak pacman/pacman.conf /etc/pacman.conf
 
 if ! command -v yay &>/dev/null; then
     echo "Installing YaY :) ..."
